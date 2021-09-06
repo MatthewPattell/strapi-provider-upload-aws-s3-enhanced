@@ -27,6 +27,7 @@ Update your `config/plugins.js`:
           prefix: null,
           quality: 80,
           webp: true,
+          webpConfig: {},
           accessLevel: env('ACCESS_LEVEL'), // Default set to: 'public-read'
           thumbnails: [
             {
@@ -43,6 +44,7 @@ Update your `config/plugins.js`:
                 height: 300,
                 fit: 'cover',
               },
+              outputOptions: {},
             },
           ],
         },
