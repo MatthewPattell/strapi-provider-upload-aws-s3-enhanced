@@ -6,7 +6,7 @@ Enhanced AWS S3 provider for Strapi uploads: thumbnails, image compression, WebP
 ## Instalation
 
 ```
-yarn add strapi-provider-upload-aws-s3-enhanced
+yarn add strapi-provider-upload-aws-s3-enhanced-v5
 ```
 
 ## Configuration
@@ -14,7 +14,7 @@ Update your `config/plugins.js`:
 
     module.exports = ({ env }) => ({
       upload: {
-        provider: 'aws-s3-enhanced',
+        provider: 'aws-s3-enhanced-v5',
         providerOptions: {
           accessKeyId: env('AWS_ACCESS_KEY_ID'),
           secretAccessKey: env('AWS_ACCESS_SECRET'),
@@ -28,6 +28,7 @@ Update your `config/plugins.js`:
           quality: 80,
           webp: true,
           webpConfig: {},
+          generateDensity: true,
           accessLevel: env('ACCESS_LEVEL'), // Default set to: 'public-read'
           thumbnails: [
             {
